@@ -76,6 +76,13 @@ public class subway {
                 if (args.length == 2) {
                     subwayMap();
                     System.out.println("数据读取成功 ~");
+                    for(SubwayLine i : lines){
+                        System.out.print(i.getName()+": ");
+                        for(Station j : i.getStations()){
+                            System.out.print(j.getName()+" ");
+                        }
+                        System.out.println();
+                    }
                 } else {
                     System.out.println("输入格式有误,请重新输入。");
                     break;
@@ -215,5 +222,4 @@ public class subway {
                 System.out.println("输入格式有误，请重新输入。");
         }
     }
-
 }
